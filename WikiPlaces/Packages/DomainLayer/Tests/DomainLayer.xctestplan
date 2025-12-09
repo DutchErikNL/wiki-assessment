@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "5A4C35F1-E839-43B6-A498-BD6D5DA633FB",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "DomainLayerTests",
+        "name" : "DomainLayerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

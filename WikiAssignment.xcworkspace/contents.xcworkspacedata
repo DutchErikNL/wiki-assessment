@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:WikiPlaces/Packages/DomainLayer">
+   </FileRef>
+   <FileRef
+      location = "group:WikiPlaces/Packages/DataLayer">
+   </FileRef>
+   <FileRef
       location = "group:WikiPlaces/WikiPlaces.xcodeproj">
    </FileRef>
    <FileRef

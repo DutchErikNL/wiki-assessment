@@ -5,15 +5,20 @@
 //  Created by Erik Brandsma on 08/12/2025.
 //
 
+import DataLayer
 import SwiftUI
+import DomainLayer
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
         }
         .padding()
     }

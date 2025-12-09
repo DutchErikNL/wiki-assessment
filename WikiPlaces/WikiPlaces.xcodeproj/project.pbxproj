@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		03C1D0452EE8B07D009E70C2 /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 03C1D0442EE8B07D009E70C2 /* DataLayer */; };
+		03C1D0472EE8B081009E70C2 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 03C1D0462EE8B081009E70C2 /* DomainLayer */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		03D0163A2EE74431006CDCCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,7 @@
 		03D0162C2EE7442F006CDCCD /* WikiPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D016392EE74431006CDCCD /* WikiPlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiPlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D016432EE74431006CDCCD /* WikiPlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiPlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03D28CD32EE8D55400FE68DA /* WikiPlaces.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = WikiPlaces.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C1D0472EE8B081009E70C2 /* DomainLayer in Frameworks */,
+				03C1D0452EE8B07D009E70C2 /* DataLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C1D0432EE8B07D009E70C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		03D016232EE7442F006CDCCD = {
 			isa = PBXGroup;
 			children = (
+				03D28CD32EE8D55400FE68DA /* WikiPlaces.xctestplan */,
 				03D0162E2EE7442F006CDCCD /* WikiPlaces */,
 				03D0163C2EE74431006CDCCD /* WikiPlacesTests */,
 				03D016462EE74431006CDCCD /* WikiPlacesUITests */,
+				03C1D0432EE8B07D009E70C2 /* Frameworks */,
 				03D0162D2EE7442F006CDCCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +129,8 @@
 			);
 			name = WikiPlaces;
 			packageProductDependencies = (
+				03C1D0442EE8B07D009E70C2 /* DataLayer */,
+				03C1D0462EE8B081009E70C2 /* DomainLayer */,
 			);
 			productName = WikiPlaces;
 			productReference = 03D0162C2EE7442F006CDCCD /* WikiPlaces.app */;
@@ -195,6 +214,8 @@
 			);
 			mainGroup = 03D016232EE7442F006CDCCD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 03D0162D2EE7442F006CDCCD /* Products */;
 			projectDirPath = "";
@@ -328,6 +349,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -385,6 +407,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -468,7 +491,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46748U3BA4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.eliteapps.WikiPlacesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -490,7 +513,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46748U3BA4;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.eliteapps.WikiPlacesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +534,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46748U3BA4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.eliteapps.WikiPlacesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -531,6 +555,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46748U3BA4;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.eliteapps.WikiPlacesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,6 +609,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03C1D0442EE8B07D009E70C2 /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLayer;
+		};
+		03C1D0462EE8B081009E70C2 /* DomainLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03D016242EE7442F006CDCCD /* Project object */;
 }

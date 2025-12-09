@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "CC85B4CA-1039-479B-B02D-0B05DF88E7A1",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/DomainLayer",
+        "identifier" : "DomainLayerTests",
+        "name" : "DomainLayerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/DataLayer",
+        "identifier" : "DataLayerTests",
+        "name" : "DataLayerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WikiPlaces.xcodeproj",
+        "identifier" : "03D016382EE74431006CDCCD",
+        "name" : "WikiPlacesTests"
+      }
+    }
+  ],
+  "version" : 1
+}
