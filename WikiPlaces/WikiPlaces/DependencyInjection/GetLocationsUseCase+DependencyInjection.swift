@@ -9,7 +9,7 @@ import DataLayer
 import DomainLayer
 
 extension GetLocationsUseCase {
-    convenience init() {
+    public convenience init() {
         self.init(repository: LocationsRepository())
     }
 }

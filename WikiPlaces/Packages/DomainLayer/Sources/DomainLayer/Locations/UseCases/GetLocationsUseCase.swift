@@ -12,7 +12,7 @@ public class GetLocationsUseCase {
         self.repository = repository
     }
     
-    public func getLocations(clearCache: Bool) async throws  -> [Location] {
+    public func callAsFunction(clearCache: Bool) async throws  -> [Location] {
         try await repository.getLocations(clearCache: clearCache)
     }
 }

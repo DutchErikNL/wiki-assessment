@@ -8,7 +8,7 @@
 import DomainLayer
 import Foundation
 
-public struct LocationsResponse: Codable, Sendable {
+public struct LocationsResponse: Codable, Sendable, Equatable {
     public let locations: [Location]
 }
 
@@ -32,6 +32,7 @@ public class LocationsAPI: LocationsAPIProtocol {
         let data = try await dataFetcher.data(from: url)
         let decoder = JSONDecoder()
         let response = try decoder.decode(LocationsResponse.self, from: data)
+        try? await Task.sleep(nanoseconds: 1 * 1_000_000_000)
         return response.locations
     }
 }

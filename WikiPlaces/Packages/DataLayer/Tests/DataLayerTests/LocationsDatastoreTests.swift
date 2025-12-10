@@ -13,13 +13,13 @@ import Testing
 public struct LocationsDatastoreTests {
     private let amsterdam = Location(
         name: "Amsterdam",
-        lat: 52.3547498,
-        long: 4.8339215
+        latitude: 52.3547498,
+        longitude: 4.8339215
     )
     private let mumbai = Location(
         name: "Mumbai",
-        lat: 19.0823998,
-        long: 72.8111468
+        latitude: 19.0823998,
+        longitude: 72.8111468
     )
     
     @Test

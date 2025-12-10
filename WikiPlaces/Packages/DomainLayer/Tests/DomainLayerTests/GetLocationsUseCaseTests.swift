@@ -6,8 +6,8 @@ import Testing
 public struct GetLocationsUseCaseTests {
     private let amsterdam = Location(
         name: "Amsterdam",
-        lat: 52.3547498,
-        long: 4.8339215
+        latitude: 52.3547498,
+        longitude: 4.8339215
     )
 
     @Test
@@ -19,7 +19,7 @@ public struct GetLocationsUseCaseTests {
         let sut = GetLocationsUseCase(repository: mockRepository)
         
         // Act
-        let result = try await sut.getLocations(clearCache: expectedClearCache)
+        let result = try await sut(clearCache: expectedClearCache)
         
         // Assert
         #expect(result == expectedResult)
@@ -36,7 +36,7 @@ public struct GetLocationsUseCaseTests {
         
         // Act
         do {
-            let _ = try await sut.getLocations(clearCache: expectedClearCache)
+            let _ = try await sut(clearCache: expectedClearCache)
             Issue.record("getLocations should throw")
         } catch(let error as NSError) {
             // Assert

@@ -11,15 +11,11 @@ import DomainLayer
 import Foundation
 import Testing
 
-public class DummyObject: NSObject {
-    
-}
-
 public struct LocationsAPITests {
     private let amsterdam = Location(
         name: "Amsterdam",
-        lat: 52.3547498,
-        long: 4.8339215
+        latitude: 52.3547498,
+        longitude: 4.8339215
     )
     
     @Test

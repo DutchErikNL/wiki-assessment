@@ -11,7 +11,9 @@ import SwiftUI
 struct WikiPlacesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                LocationsView()
+            }
         }
     }
 }
