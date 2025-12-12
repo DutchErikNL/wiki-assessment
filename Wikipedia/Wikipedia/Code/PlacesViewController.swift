@@ -54,6 +54,8 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
     fileprivate var previouslySelectedArticlePlaceIdentifier: Int?
     fileprivate var didYouMeanSearch: PlaceSearch?
     fileprivate var searching: Bool = false
+    fileprivate var deeplinkLocation: WMFLocation? = nil
+    fileprivate let deeplinkLocationSpan = MKCoordinateSpan(latitudeDelta: 0.40, longitudeDelta: 0.40)
     // SINGLETONTODO
     fileprivate let imageController = MWKDataStore.shared().cacheController.imageCache
 
@@ -224,13 +226,20 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
             return
         }
 
-        locationManager.startMonitoringLocation()
-        mapView.showsUserLocation = true
+        if deeplinkLocation != nil {
+            locationManager.startMonitoringLocation()
+            mapView.showsUserLocation = true
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         ArticleTabsFunnel.shared.logIconImpression(interface: .places, project: nil)
+        
+        // One view cycle is necessary for the map to not ignore this setRegion
+        DispatchQueue.main.async { [weak self] in
+            self?.panMapToDeeplinkLocation()
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -2088,10 +2097,9 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
         currentSearch = PlaceSearch(filter: .top, type: .location, origin: .user, sortStyle: .links, string: nil, region: region, localizedDescription: title, searchResult: searchResult, siteURL: articleURL.wmf_site)
     }
     
-    @objc public func showLocation(_ location: WMFLocation) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.30, longitudeDelta: 0.30)
-        
-        mapRegion = MKCoordinateRegion(center: location.coordinate, span: span)
+    @objc public func setDeeplinkLocation(_ location: WMFLocation) {
+        self.deeplinkLocation = location
+        panMapToDeeplinkLocation()
     }
 
     fileprivate func searchForFirstSearchSuggestion() {
@@ -2278,6 +2286,20 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
         view.heading = heading.trueHeading
     }
 
+    func panMapToDeeplinkLocation() {
+        guard
+            let deeplinkLocation,
+            view != nil
+        else {
+            return
+        }
+        
+        mapView.setRegion(MKCoordinateRegion(
+            center: deeplinkLocation.coordinate,
+            span: deeplinkLocationSpan
+        ), animated: true)
+    }
+    
     func zoomAndPanMapView(toLocation location: CLLocation) {
         let region = [location.coordinate].wmf_boundingRegion(with: 10000)
         mapRegion = region
@@ -2295,7 +2317,6 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
             promptForLocationAccess()
             return
         }
-        print("LOC: USERLOCATION")
         zoomAndPanMapView(toLocation: userLocation)
     }
 

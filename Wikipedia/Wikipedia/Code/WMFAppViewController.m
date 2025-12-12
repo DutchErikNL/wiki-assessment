@@ -1313,10 +1313,8 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                 [[self placesViewController] updateViewModeToMap];
                 [[self placesViewController] showArticleURL:articleURL];
             } else if (location != nil) {
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [[self placesViewController] updateViewModeToMap];
-                    [[self placesViewController] showLocation:location];
-                });
+                [[self placesViewController] updateViewModeToMap];
+                [[self placesViewController] setDeeplinkLocation:location];
             }
         } break;
         case WMFUserActivityTypeContent: {
