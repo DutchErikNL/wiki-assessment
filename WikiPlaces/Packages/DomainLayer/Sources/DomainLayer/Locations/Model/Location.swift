@@ -35,6 +35,12 @@ extension Location {
     }
     
     public var wikipediaPlacesURL: URL? {
-        URL(string: "wikipedia://places?latitude=\(latitude)&latitude=\(longitude)")
+        var urlString = "wikipedia://places?location_latitude=\(latitude)&location_longitude=\(longitude)"
+        
+        if let name {
+            urlString = "\(urlString)&location_name=\(name)"
+        }
+        
+        return URL(string: urlString)
     }
 }

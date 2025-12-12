@@ -309,6 +309,7 @@
 		00FCCBCF2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
 		00FCCBD02900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
 		00FCCBD12900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
+		03FAFD682EEC1D3300F8CD4B /* WMFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAFD632EEC110F00F8CD4B /* WMFLocation.swift */; };
 		041EFC371996A1F800B2CB28 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041EFC361996A1F800B2CB28 /* MapKit.framework */; };
 		0E281A331DC263DE00FA1AB1 /* WMFLegacyReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E281A321DC263DE00FA1AB1 /* WMFLegacyReference.swift */; };
 		0E36C2271AE0B59D00C58CFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4991453181D51DE00E6073C /* Images.xcassets */; };
@@ -3133,6 +3134,7 @@
 		00FCCBC4290082C200C9ECD2 /* TalkPageFindInPageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageFindInPageState.swift; sourceTree = "<group>"; };
 		00FCCBC92900848300C9ECD2 /* TalkPageViewController+FindInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TalkPageViewController+FindInPage.swift"; sourceTree = "<group>"; };
 		00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Highlight.swift"; sourceTree = "<group>"; };
+		03FAFD632EEC110F00F8CD4B /* WMFLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMFLocation.swift; sourceTree = "<group>"; };
 		040E5C4E184566F4007AFE6F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		041EFC361996A1F800B2CB28 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0E10C4FD1C81046300CEB5C2 /* Wikipedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wikipedia.entitlements; sourceTree = "<group>"; };
@@ -5326,6 +5328,14 @@
 				00FCCBC92900848300C9ECD2 /* TalkPageViewController+FindInPage.swift */,
 			);
 			name = "Find in Page";
+			sourceTree = "<group>";
+		};
+		03FAFD672EEC150000F8CD4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03FAFD632EEC110F00F8CD4B /* WMFLocation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		041A3B5718E11ED90079FF1C /* Languages */ = {
@@ -8158,6 +8168,7 @@
 				D8F36F021EEEBA130087D4DD /* Licenses.swift */,
 				D8726D421EBA052900A107D0 /* Localization.swift */,
 				8336F1422119BD6E000CDE02 /* MediaWikiAcceptLanguageMapping.json */,
+				03FAFD672EEC150000F8CD4B /* Models */,
 				0E03E27E1B82EF7600C1FBD7 /* Nearby */,
 				8330531E23EF051900123141 /* NSArray+WMFMapping.h */,
 				8330531D23EF051900123141 /* NSArray+WMFMapping.m */,
@@ -10415,7 +10426,6 @@
 				678D79E4235E592F006161FF /* DiffListChangeItemViewModel.swift in Sources */,
 				B0BCF0AB2023AC7700986F72 /* ScrollableEducationPanelViewController.swift in Sources */,
 				67165C602ECFD3EB0078098D /* DatabasePopulationViewModel.swift in Sources */,
-				37C4A98D2DB95FE000AD7141 /* WMFActivityTabExperimentOldViewController.swift in Sources */,
 				7AB209F922FC67B4006FECB4 /* PageHistoryViewController.swift in Sources */,
 				B0E804DA1C0CE0B40065EBC0 /* NSString+FormattedAttributedString.m in Sources */,
 				B01CFC5F1E70B00100B3546A /* WMFDeleteBackwardReportingTextField.swift in Sources */,
@@ -10548,6 +10558,7 @@
 				D81EFDE21D775B140035F2EB /* NSUserActivity+WMFExtensions.m in Sources */,
 				8320332122B90548004A9EDA /* NSManagedObjectContext+NavigationState.swift in Sources */,
 				67D6C00C24058714005709B1 /* CacheItemMappingModel.xcmappingmodel in Sources */,
+				03FAFD682EEC1D3300F8CD4B /* WMFLocation.swift in Sources */,
 				7A9133AA22B162E8002AEBCF /* RemoteNotifications.xcdatamodeld in Sources */,
 				D8733C941ECA16940011E379 /* HasText.swift in Sources */,
 				37FAFB352E45382500EEFEC5 /* DidYouKnowCache.swift in Sources */,

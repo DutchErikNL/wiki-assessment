@@ -2087,6 +2087,12 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
         let searchResult = MWKSearchResult(articleID: 0, revID: 0, title: title, displayTitle: displayTitle, displayTitleHTML: displayTitleHTML, wikidataDescription: article.wikidataDescription, extract: article.snippet, thumbnailURL: article.thumbnailURL, index: nil, titleNamespace: nil, location: article.location)
         currentSearch = PlaceSearch(filter: .top, type: .location, origin: .user, sortStyle: .links, string: nil, region: region, localizedDescription: title, searchResult: searchResult, siteURL: articleURL.wmf_site)
     }
+    
+    @objc public func showLocation(_ location: WMFLocation) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.30, longitudeDelta: 0.30)
+        
+        mapRegion = MKCoordinateRegion(center: location.coordinate, span: span)
+    }
 
     fileprivate func searchForFirstSearchSuggestion() {
         if !searchSuggestionController.searches[PlaceSearchSuggestionController.completionSection].isEmpty {
@@ -2289,6 +2295,7 @@ class PlacesViewController: ArticleLocationCollectionViewController, UISearchBar
             promptForLocationAccess()
             return
         }
+        print("LOC: USERLOCATION")
         zoomAndPanMapView(toLocation: userLocation)
     }
 
