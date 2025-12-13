@@ -5,8 +5,8 @@
 
 ## Tooling
 Made using Xcode 26.1.1 (17B100).
-[Apple Silicon - Download Xcode 26.1.1 (17B100) here](https://download.developer.apple.com/Developer_Tools/Xcode_16/Xcode_16.xip)
-[Universal - Download Xcode 26.1.1 (17B100) here](https://download.developer.apple.com/Developer_Tools/Xcode_26.1.1/Xcode_26.1.1_Universal.xip)
+- [Apple Silicon - Xcode 26.1.1 (17B100) download here](https://download.developer.apple.com/Developer_Tools/Xcode_16/Xcode_16.xip)
+- [Universal - Xcode 26.1.1 (17B100) download here](https://download.developer.apple.com/Developer_Tools/Xcode_26.1.1/Xcode_26.1.1_Universal.xip)
 
 ## Test app project properties
 
