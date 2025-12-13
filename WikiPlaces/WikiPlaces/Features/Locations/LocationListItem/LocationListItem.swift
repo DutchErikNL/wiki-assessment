@@ -23,8 +23,8 @@ public struct LocationListItem: View {
                     openURL(url)
                 }
             }
+            .accessibilityElement(children: .ignore)
             .accessibilityLabel(location.accessibilityLabel)
-            .accessibilityElement(children: .combine)
             .accessibilityHint(String(localized: "LocationListItemAccessibilityHint"))
     }
     
