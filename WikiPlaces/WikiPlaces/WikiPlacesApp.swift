@@ -11,8 +11,16 @@ import SwiftUI
 struct WikiPlacesApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
+            TabView {
                 LocationsView()
+                    .tabItem {
+                        Label(String(localized: "Places"), systemImage: "mappin")
+                    }
+                
+                CustomLocationView()
+                    .tabItem {
+                        Label(String(localized: "Custom place"), systemImage: "mappin.and.ellipse")
+                    }
             }
         }
     }

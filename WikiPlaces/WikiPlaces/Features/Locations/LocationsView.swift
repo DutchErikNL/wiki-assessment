@@ -11,6 +11,8 @@ import DomainLayer
 
 public struct LocationsView: View {
     @StateObject var viewModel: LocationsViewModel = LocationsViewModel()
+    @State private var customLatitude: String = ""
+    @State private var customLongitude: String = ""
     
     public var body: some View {
         List {
@@ -20,7 +22,7 @@ public struct LocationsView: View {
                 }
             }
         }
-        .navigationTitle(String(localized: "Locations"))
+        .accessibilityIdentifier("Locations_list")
         .onAppear {
             Task {
                 await viewModel.loadLocations(clearCache: false)
@@ -31,6 +33,7 @@ public struct LocationsView: View {
         }
     }
 }
+
 
 #Preview {
     LocationsView()

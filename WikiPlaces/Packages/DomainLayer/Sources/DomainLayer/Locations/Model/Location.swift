@@ -30,6 +30,22 @@ public struct Location: Codable, Equatable, Sendable {
 }
 
 extension Location {
+    public init?(
+        name: String?,
+        latitudeStr: String,
+        longitudeStr: String
+    ) {
+        guard
+            let lat = Double(latitudeStr),
+            let long = Double(longitudeStr)
+        else {
+            return nil
+        }
+        self.init(name: name, latitude: lat, longitude: long)
+    }
+}
+
+extension Location {
     public var latitudeLongitudeTitle: String {
         "\(latitude), \(longitude)"
     }

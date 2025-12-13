@@ -24,7 +24,7 @@ struct LocationViewVariablesTests {
         )
     }
     
-    @Test("Test accessibilityLabel", arguments: [
+    @Test("Test location accessibilityLabel", arguments: [
         // Arrange
         (
             Constants.amsterdam,
@@ -43,7 +43,7 @@ struct LocationViewVariablesTests {
         #expect(result == expectedResult)
     }
     
-    @Test("Test title", arguments: [
+    @Test("Test location title", arguments: [
         // Arrange
         (Constants.amsterdam, Constants.amsterdam.name),
         (Constants.unnamedLocation, "Unnamed location")
@@ -56,7 +56,7 @@ struct LocationViewVariablesTests {
         #expect(result == expectedResult)
     }
     
-    @Test("Test coordinatesAccessibilityLabel", arguments: [
+    @Test("Test location coordinatesAccessibilityLabel", arguments: [
         // Arrange
         (Constants.amsterdam, "latitude: \(Constants.amsterdam.latitude), longitude: \(Constants.amsterdam.longitude)"),
         (Constants.unnamedLocation, "latitude: \(Constants.unnamedLocation.latitude), longitude: \(Constants.unnamedLocation.longitude)")
