@@ -38,7 +38,7 @@ public struct CustomLocationView: View {
                 openURL(url)
             } label: {
                 Text(String(localized: "Open Wikipedia"))
-                    .font(.title)
+                    .font(.title2)
                     .bold()
             }
             .alert(String(localized: "Can't open"), isPresented: $showCantOpenURLAlert) {
