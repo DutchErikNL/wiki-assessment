@@ -17,7 +17,7 @@ Made using Xcode 26.1.1 (17B100).
  - Is fully accessibility compatible:
      - Grouping of children to make voiceover elements logical to visually impaired users
      - Understandable accessibility labels
-     -      Dark mode compatibility
+     - Dark mode compatibility
      - Verified by automatic UITest accessibility audits that check:
          - Contrast
          - Scaling text
