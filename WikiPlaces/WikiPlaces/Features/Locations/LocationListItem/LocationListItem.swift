@@ -39,7 +39,7 @@ public struct LocationListItem: View {
                     
                     Text(location.latitudeLongitudeTitle)
                         .font(.body)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.primary.opacity(0.7))
                 }
                 
                 Spacer()

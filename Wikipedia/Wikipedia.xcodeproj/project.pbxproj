@@ -309,6 +309,7 @@
 		00FCCBCF2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
 		00FCCBD02900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
 		00FCCBD12900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */; };
+		03EB83262EEEC42E00465EF8 /* WMFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB83252EEEC42900465EF8 /* WMFLocationTests.swift */; };
 		03FAFD682EEC1D3300F8CD4B /* WMFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAFD632EEC110F00F8CD4B /* WMFLocation.swift */; };
 		041EFC371996A1F800B2CB28 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041EFC361996A1F800B2CB28 /* MapKit.framework */; };
 		0E281A331DC263DE00FA1AB1 /* WMFLegacyReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E281A321DC263DE00FA1AB1 /* WMFLegacyReference.swift */; };
@@ -3134,6 +3135,7 @@
 		00FCCBC4290082C200C9ECD2 /* TalkPageFindInPageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkPageFindInPageState.swift; sourceTree = "<group>"; };
 		00FCCBC92900848300C9ECD2 /* TalkPageViewController+FindInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TalkPageViewController+FindInPage.swift"; sourceTree = "<group>"; };
 		00FCCBCE2900A6C500C9ECD2 /* NSMutableAttributedString+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Highlight.swift"; sourceTree = "<group>"; };
+		03EB83252EEEC42900465EF8 /* WMFLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMFLocationTests.swift; sourceTree = "<group>"; };
 		03FAFD632EEC110F00F8CD4B /* WMFLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMFLocation.swift; sourceTree = "<group>"; };
 		040E5C4E184566F4007AFE6F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		041EFC361996A1F800B2CB28 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -7796,6 +7798,7 @@
 		BCD67E7D1C1F12F2005179E1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				03EB83252EEEC42900465EF8 /* WMFLocationTests.swift */,
 				67E6532A2BEC1DF40024F699 /* Wikitext Tests */,
 				67F73384273C1FA200D7D713 /* Notifications Tests */,
 				671DF9D625F2B57B0011799E /* Article Description Tests */,
@@ -9969,6 +9972,7 @@
 				B0E809091C0D18BC0065EBC0 /* NSString+WMFHTMLParsingTests.m in Sources */,
 				19A175F095F5197BA20EA8BA /* NSUserActivity+WMFExtensionsTest.m in Sources */,
 				67DAEDEF27E8FB63005CF9B6 /* NotificationsCenterDetailViewModelThanksTests.swift in Sources */,
+				03EB83262EEEC42E00465EF8 /* WMFLocationTests.swift in Sources */,
 				67DAEDF127E8FB63005CF9B6 /* NotificationsCenterDetailViewModelEditMilestoneTests.swift in Sources */,
 				004281C925E6EFC4004945B3 /* LSStubResponseDSL.m in Sources */,
 				004281B225E6EFC4004945B3 /* LSStubRequest.m in Sources */,

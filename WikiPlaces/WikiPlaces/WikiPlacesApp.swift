@@ -16,11 +16,13 @@ struct WikiPlacesApp: App {
                     .tabItem {
                         Label(String(localized: "Places"), systemImage: "mappin")
                     }
-                
+                    .accessibilityIdentifier("tab_locations")
+
                 CustomLocationView()
                     .tabItem {
                         Label(String(localized: "Custom place"), systemImage: "mappin.and.ellipse")
                     }
+                    .accessibilityIdentifier("tab_custom_location")
             }
         }
     }

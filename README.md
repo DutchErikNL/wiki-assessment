@@ -18,13 +18,13 @@ Made using Xcode 26.1.1 (17B100).
      - Grouping of children to make voiceover elements logical to visually impaired users
      - Understandable accessibility labels
      - Dark mode compatibility
-     - Verified by automatic UITest accessibility audits that check:
+     - Verified by automatic UITest accessibility audits that checks among others:
          - Contrast
-         - Scaling text
          - Hitboxes
          - Text descriptions
          - Text clipping
- - Is fully localized for English and Dutch, depending on your device language, you'll get one of those.
+ - Is fully localized for English and Dutch, depending on your device language preferences, you'll get one of those. Accessibility labels are also fully localized
+ - I added a small delay on the network call as usually getting a static JSON file from raw.github.com is so fast you can't see how the app reacts to a "loading" state
     
 ## How to run
 

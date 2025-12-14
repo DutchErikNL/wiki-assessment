@@ -9,12 +9,16 @@ import XCTest
 
 @available(iOS 17.0, *)
 final class WikiPlacesAccessibilityUITests: XCTestCase {
+    // Unfortunately MapKit doesn't support dynamicType
+    let auditTypes = XCUIAccessibilityAuditType.all.subtracting(.dynamicType)
+    
     override func setUp() {
         super.setUp()
         continueAfterFailure = true
     }
     
     func testAutoAccessibilityAuditPlaces() throws {
+        // Arrange
         let app = XCUIApplication()
         app.launch()
         let list = app.tables["Locations_list"]
@@ -23,16 +27,21 @@ final class WikiPlacesAccessibilityUITests: XCTestCase {
             predicate: predicate,
             object: list.cells
         )
-        
         XCTWaiter().wait(for: [expectation], timeout: 5)
-        try app.performAccessibilityAudit(for: .all)
+        
+        // Act
+        // Assert
+        try app.performAccessibilityAudit(for: auditTypes)
     }
     
     func testAutoAccessibilityAuditCustomPlace() throws {
+        // Arrange
         let app = XCUIApplication()
         app.launch()
-        app.tabBars.buttons["Custom place"].tap()
-
-        try app.performAccessibilityAudit(for: .all)
+        app.buttons.containing(.button, identifier: "mappin.and.ellipse").firstMatch.tapWhenExists()
+        
+        // Act
+        // Assert
+        try app.performAccessibilityAudit(for: auditTypes)
     }
 }
